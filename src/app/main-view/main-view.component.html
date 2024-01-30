@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="portfolio-section-bg" id="portfolio-section-bg">
+        <div class="shapes">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="porfolio-section-wrapper" id="porfolio-section-wrapper">
+          <div class="porfolio-section-list" id="porfolio-section-list">
+            <app-profile></app-profile>
+            <app-profile-list></app-profile-list>
+          </div>
+          <div class="porfolio-section-detail" id="porfolio-section-detail">
+            <app-profile-detail></app-profile-detail>
+          </div>
+          <ng-container>
+            <div class="user-profile-detail-navbar-mobile">
+              <ul class="user-profile-detail-nav-links">
+                <li>
+                  <a routerLink="about" href="" [routerLinkActive]="'active'">About</a>
+                </li>
+                <li>
+                  <a routerLink="resume" href="" [routerLinkActive]="'active'"
+                    >Resume</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="portfolio" href="" [routerLinkActive]="'active'"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a routerLink="contact" href="" [routerLinkActive]="'active'"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    
+</div>

@@ -1,0 +1,137 @@
+.container {
+  margin-top: 1rem;
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    color: #3E3B3B;
+    margin-bottom: 20px;
+  }
+
+  .exp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+
+    &::before {
+      background-color: #3E3B3B;
+      position: absolute;
+      opacity: 47%;
+      width: 2px;
+      content: "";
+      top: 54px;
+      height: 22px;
+      left: 25px;
+      z-index: 1;
+    }
+
+    svg {
+      width: 57px;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      color: #3E3B3B;
+    }
+  }
+
+  .exp-lists {
+    margin-left: 70px;
+    list-style: disc;
+    padding: 0;
+
+    li {
+      list-style: none;
+      position: relative;
+
+      .list-item {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: -5px;
+        line-height: 26px;
+        color: #3E3B3B;
+
+        svg {
+          margin-left: -3.10em;
+          margin-top: 0.34em;
+          position: absolute;
+          z-index: 2;
+
+          &#blinking-svg {
+            @keyframes blink {
+              0% {
+                opacity: 0;
+              }
+
+              50% {
+                opacity: 1;
+              }
+
+              100% {
+                opacity: 0;
+              }
+            }
+
+            .inner-circle {
+              animation: blink 1s ease-in-out infinite;
+            }
+          }
+        }
+
+        &::after {
+          position: absolute;
+          background-color: #3E3B3B;
+          opacity: 47%;
+          width: 2px;
+          content: "";
+          top: 0px;
+          bottom: -18px;
+          left: -45px;
+          z-index: 1;
+        }
+
+        span {
+          color: #878789;
+        }
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          list-style: disc;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 20px;
+          color: #3E3B3B;
+        }
+      }
+
+      h4 {
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 13px;
+        line-height: 20px;
+        color: #3E3B3B;
+      }
+
+      h3 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 13px;
+        line-height: 22px;
+        color: #3E3B3B;
+      }
+    }
+  }
+}

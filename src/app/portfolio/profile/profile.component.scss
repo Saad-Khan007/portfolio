@@ -1,0 +1,30 @@
+.user-profile {
+    height: 250px;
+    background: linear-gradient(62.42deg, rgba(255, 255, 255, 0.1) 20.61%, rgba(255, 255, 255, 0) 82.27%);
+    filter: drop-shadow(2px 4px 30px rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(35px);
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgb(58, 58, 58,.1);
+    margin-bottom: 20px;
+
+    .user-profile-list {
+        .user-profile-wrapper {
+            padding: 20px 20px;
+            text-align: center;
+            display: flex;
+            gap: 7px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .user-role {
+                color: #858181;
+                margin-bottom: 7px;
+            }
+
+            .user-name {
+                color: #3E3B3B;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "bootstrap/scss/bootstrap";
+
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2px;
+}
+
+.title-heading {
+  font-size: 31px;
+  color: #3E3B3B;
+  font-weight: 700;
+  line-height: 51px;
+}
+
+
+@media (max-width: 700px){
+  #porfolio-section-wrapper{
+    display: block;
+    width: 90% !important;
+    padding-bottom: 0;
+  }
+  #porfolio-section-list{
+    width: 100% !important;
+  }
+  #porfolio-section-detail{
+    width: 100% !important;
+    height: calc(100vh - 260px);
+  }
+  .user-profile{
+    height: auto !important;
+    .user-profile-wrapper{
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    .user-details{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    }
+  }
+  .user-profile-list{
+    &.d-none{
+      display:none;
+    }
+  }
+  .user-profile-detail-page{
+    padding: 10px 20px 29px 20px !important;
+  }
+  .user-profile-detail-navbar{
+    display: none;
+  }
+}

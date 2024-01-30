@@ -1,0 +1,31 @@
+<div class="portfolio">
+  <h1>Portfolio</h1>
+  <div class="portfolio__nav">
+    <div *ngFor="let category of categories; index as i">
+      <button
+        (click)="showCategory(category)"
+        class="portfolio__nav--btn"
+        [class.active]="currentCategory.name === category.name"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+  </div>
+  <div class="portfolio__gallery" [class.loading]="loading">
+    <div
+      class="portfolio__gallery--item"
+      *ngFor="let image of currentCategory.images"
+      [class.loaded]="!loading"
+    >
+      <div class="gallery-image" (click)="gotoDetails(image)">
+        <img src="assets/img/{{ image.path }}" alt="{{ image }}" />
+        <div class="img-overlay">
+          <div class="plus"></div>
+          <div class="img-description">
+            <h3>{{ currentCategory.categoryHeading }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="portfolio-details">
+  <div class="portfolio-details-heading">
+    <button (click)="goback()">
+      <img src="assets/img/chevron.svg" alt="icon" />
+    </button>
+    <h1>Portfolio</h1>
+  </div>
+  <!-- <div class="portfolio-details__hero">
+    <img [src]="'assets/img/' + bgImage" alt="portfolio" />
+  </div> -->
+  <div class="portfolio-details-hero">
+    <img src="assets/img/bannerImage.jpg" alt="" srcset="">
+  </div>
+    <div class="portfolio-details-images-wrapper">
+        <div class="portfolio-detail-image"  *ngFor="let image of detailImages" (click)="onClick($event, mymodal)">
+          <img [src]="'assets/img/' + image.detailPathImages" alt=""/>
+        </div>
+    </div>
+</div>
+<ng-template #mymodal let-modal>
+  <div class="modal-body">
+    <img
+      src="{{ imgSrc }}"
+      class="modal-hover-opacity"
+    />
+  </div>
+</ng-template>
